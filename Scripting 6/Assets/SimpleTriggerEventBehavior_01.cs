@@ -8,6 +8,7 @@ public class SimpleTriggerEventBehavior_01 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        triggerEvent(SetTrigger("Hit"))
         triggerEvent.Invoke();
         Debug.Log("Player interacted with the object!");
     }
