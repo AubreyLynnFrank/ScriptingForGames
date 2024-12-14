@@ -12,5 +12,32 @@ public class SimpleTriggerEventBehavior_01 : MonoBehaviour
         triggerEvent.Invoke();
         Debug.Log("Player interacted with the object!");
     }
+    // to 
+ private void OnTriggerStart(Collider other)
+    {
+        triggerEvent(SetTrigger("Start"))
+        triggerEvent.Invoke();
+        Debug.Log("Player started the game!");
+    }
+    // To remove the fruit when the player gathers it. 
+     private void OnTriggerCollide(Collider other)
+    {
+        triggerEvent(SetTrigger("Collect"))
+        triggerEvent.Invoke();
+        Debug.Log("Player has gathered the fruit.");
+    }
+    //to spin the spike heads while the game is running. 
+    private void OnTriggerCollide(Collider other)
+    {
+        triggerEvent(SetTrigger("Spin"))
+        triggerEvent.Invoke();
+        Debug.Log("The spike head spins.");
+    }
 
+// To shake the UI when a player collects an item
+        private void OnTriggerCollide(Collider other)
+    {
+        triggerEvent(SetTrigger("Spin"))
+        triggerEvent.Invoke();
+        Debug.Log("The spike head spins.");
 }

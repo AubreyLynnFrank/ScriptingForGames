@@ -10,6 +10,11 @@ public class SimpleTextMeshProBehavior : MonoBehaviour
     private TextMeshProUGUI textObj;
     public SimpleIntData dataObj;
 
+    // shake text when the player collects and item.
+    private TextMeshProUGUI textObj;
+    public int value (UpdateValue(int amount))
+        value += amount; 
+
     private void start()
     {
         textObj = GetComponent <TextMeshProGUI>();
